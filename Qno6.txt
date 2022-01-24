@@ -1,0 +1,35 @@
+/*Q6. Find the output and write explanation?
+
+
+class Test{
+	public static void main(String[]args){
+		byte b=127;
+		++b;
+		b++;
+		System.out.println("Value of variable b: "+b);
+	} 
+}
+
+/*
+ans:
+dry Run
+	byte b=127
+
+b		++b		b++   		Print(b)
+127		128		128               -
+129						 129
+
+
+1 byte= 8 bit
+
+129 int binary= 00000000 00000000 00000000 10000001
+
+here 1 is negateive
+hear 2's compliment 10000001
+1 1111110
++	1
+
+  1111111
+
+ there for out put is: -127
+*/

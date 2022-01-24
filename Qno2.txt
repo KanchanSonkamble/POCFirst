@@ -1,0 +1,55 @@
+/*2. Concept of method implementation
+Write a program to create ‘Square’ and ‘Rectangle’ class.
+i. Implement methods to calculate area and perimeter of square and rectangles. 
+These two methods are going to take side as argument in square and length and 
+breadth in case of rectangle.
+ii. Create a ‘MainClass’ in which define main method ,in which create two object for 
+each Square and Rectangle class, Now calculate then show area and perimeter in 
+the console after providing appropriate values for side , length & breadth using 
+methods of these classes.*/
+
+import java.util.*;
+class Shape {
+    int area; 
+    int perimeter;  
+    
+}
+class Square extends Shape{
+    void area(int side){
+        area=side*side;
+        System.out.println("Area of Square is : "+area);
+       }
+    void perimeter(int side){
+        perimeter=4*side;
+        System.out.println("perimeter of Square is : "+perimeter);
+       }
+ } 
+
+class Rectangle extends Shape{      
+    void area(int length,int bredth){
+        area=length*bredth;
+        System.out.println("Area of Rectangle is : "+area);
+    }
+    void perimeter(int length, int bredth){
+        perimeter=2*(length+bredth);
+        System.out.println("Perimeter of Rectangle is: "+perimeter);
+    }
+}
+   
+public class MainClass {
+ public static void main(String[] args) {
+     Square s = new Square();
+     Rectangle r = new Rectangle();
+     Scanner sc = new Scanner(System.in);
+     System.out.print("Enetr the side: ");
+     int side=sc.nextInt();
+     System.out.print("Enter length: ");
+     int length=sc.nextInt();
+     System.out.print("Enter Width: ");
+     int width=sc.nextInt();
+     s.area(side);
+     s.perimeter(side);
+     r.area(length,width);
+     r.perimeter(length,width);
+ }   
+}
